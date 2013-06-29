@@ -11,3 +11,5 @@ git clone https://github.com/psahni/fragment_caching_demoapp.git
 ```
  rake db:migrate
 ```
+
+#### email : prashantsahni5@gmail.com
