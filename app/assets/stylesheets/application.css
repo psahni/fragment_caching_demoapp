@@ -1,0 +1,220 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require ajax-error
+ *= require_tree .
+ */
+ 
+ 
+*{
+    margin:0;
+    padding:0;
+}
+html {
+	background-color: #F15A24;
+	padding-top: 10px;
+	font-family: Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+
+a img {
+  border: none;
+}
+
+a {
+  color: #0000FF;
+}
+a:hover{
+	cursor: pointer;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container, .container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+.error_messages ul {
+  margin: 0;
+}
+
+.code_block {
+  background-color: #F3F3F3;
+  border: solid 1px #CCC;
+}
+
+.code_block pre {
+  margin: 10px 10px;
+  font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
+}
+
+.field{
+	margin: 10px 0px 0px 2px;
+    width: 350px;
+}
+.field label{
+	width: 100px;
+	float: left;
+}
+
+.field input, select{
+	width: 350px;
+}
+
+.field input{
+    height: 20px;
+    font-size: 16px;
+}
+span.number{
+	color: green;
+	font-weight: bold;
+	padding: 0px 5px 0px 5px;
+}
+.small_box{
+	float: left;
+	border: 1px solid #222;
+	padding: 5px;
+	margin: 5px;
+}
+
+
+div.field input[type='submit']{
+	width:       75px;
+	height:      30px;
+	font-size:   14px;
+	text-align: center;
+	margin-left: 100px;
+	margin-top:  20px;
+}
+
+span.ajax-error{
+	color:crimson;
+}
+
+/* TEMPLATING LAYOUT*/
+#contents{
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    z-index: 2;
+    height: auto;
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px ;
+    top: 50%;
+    left: 50%;
+
+}
+header#templating{
+    z-index: 1;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+#contents h3{
+    color:darkgoldenrod;
+    margin-top: 10px;
+}
+
+#contents ul{
+    list-style: none;
+}
+
+.left{
+    float:left;
+}
+.submit-button{
+    margin: 5px 0px 5px 0px;
+    padding: 6px;
+    font-size: 14px;
+}
+span.error{
+  color:darkgoldenrod;
+}
+
+.article{
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.article .title{
+  color:#800080;
+}
+
+
+.comments{
+  background-color: #9CF49C;
+  margin-top: 20px;
+  border: 2px solid #0040D0;
+  padding: 5px;
+  padding-left: 20px
+}
+
+.comment{
+  padding: 10px;
+  margin: 5px 0px 5px 0px;
+  color: darkred;
+}

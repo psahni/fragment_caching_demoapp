@@ -1,0 +1,34 @@
+<div class='page-template'>
+  <%=link_to "All Articles", [:articles], :style => "float:right"%>
+  <% cache @article  do %>
+
+     <div class='article-show'>
+        <h1><%=@article.title%></h1>
+        <h2><a href="<%=edit_article_path%>">Edit</a></h2>
+        <%=@article.content%>
+     </div>
+
+    <div class='comments'>
+      <h3>All Comments</h3>
+      <div id='article_comments' style=''>
+        <%=render :partial => 'comment', :collection => @article.comments%>
+      </div>
+
+    </div>
+
+   <% end %>
+  <div class='form'>
+    <%=form_for (@comment||=@article.comments.build), :url => article_comments_path(@article), :remote => true do |form|%>
+        <div class='field'>
+          <%=form.text_area :body, :cols => 40, :rows => 4 %>
+        </div>
+        <%=form.submit "Save", :class => 'submit-button'%>
+    <% end %>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  var comment_form = new AjaxErrorRepresenter('comment', { form_id:'new_comment', update_container: 'article_comments' });
+</script>
+
